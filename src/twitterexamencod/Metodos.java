@@ -1,5 +1,3 @@
-
-
 package twitterexamencod;
 
 import java.util.List;
@@ -14,12 +12,13 @@ import twitter4j.TwitterFactory;
 import twitter4j.conf.ConfigurationBuilder;
 
 /**
- * Clase que  
+ * Clase que
+ *
  * @author Administrador
  * @version 1.0
  */
 public class Metodos {
-    
+
     Twitter twitter;
     private Object sender;
 
@@ -46,11 +45,11 @@ public class Metodos {
                     + status.getText());
         }
     }
-    
+
     /**
      * Busca tweets con el texto introducido
      */
-    public void buscar() throws TwitterException {    
+    public void buscar() throws TwitterException {
         Query query = new Query();
         QueryResult result = twitter.search(query);
         for (Status status : result.getTweets()) {
@@ -58,15 +57,16 @@ public class Metodos {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
     }
-    
+
     /**
      * Crea y publica un tweet
+     *
      * @param latestStatus
      */
-    public void tweet(String latestStatus) throws TwitterException{
-         Status status = twitter.updateStatus(latestStatus);
-         System.out.println("Successfully updated the status to [" + status.getText() + "].");
-         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void tweet(String latestStatus) throws TwitterException {
+        Status status = twitter.updateStatus(latestStatus);
+        System.out.println("Successfully updated the status to [" + status.getText() + "].");
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 
     }
 

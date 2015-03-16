@@ -1,17 +1,17 @@
-
-
 package twitterexamencod;
 
 import javax.swing.JOptionPane;
 import twitter4j.TwitterException;
 
 /**
- * Clase main que hace un menu que permite elegir entre TimeLine,buscar y tweetear
+ * Clase main que hace un menu que permite elegir entre TimeLine,buscar y
+ * tweetear
+ *
  * @author Administrador
  */
 public class TwitterExamenCod {
 
-    public static void main(String[] args) throws TwitterException{
+    public static void main(String[] args) throws TwitterException {
         Metodos twit = new Metodos();
         int op;
         do {
@@ -32,7 +32,7 @@ public class TwitterExamenCod {
                     System.exit(0);
             }
         } while (op != 0 && op != 4);
-    
+
     }
 
 }
